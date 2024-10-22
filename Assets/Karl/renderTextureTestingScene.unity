@@ -1052,7 +1052,7 @@ Transform:
   m_GameObject: {fileID: 223974226}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1176, z: 0}
+  m_LocalPosition: {x: 0.09, y: 1.01, z: 0.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1315,54 +1315,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ActionAssets: []
-  m_VRTrigger:
-    m_UseReference: 0
-    m_Action:
-      m_Name: VR Trigger
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 759c2ca1-e679-4123-a69c-50bd01c3a81c
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_VRGrip:
-    m_UseReference: 0
-    m_Action:
-      m_Name: VR Grip
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 6c2b1b52-c220-4ca5-b271-35ddc71da1e0
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_VRPrimaryButton:
-    m_UseReference: 0
-    m_Action:
-      m_Name: VR Primary Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 7d0a3f29-8b17-4ea7-bc23-8479510d7063
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_VRSecondaryButton:
-    m_UseReference: 0
-    m_Action:
-      m_Name: VR Secondary Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 31f7fad3-f022-4739-938e-3fefa07c5020
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
 --- !u!114 &782628377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,19 +1353,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8203058086547295988, guid: 63fff4dda137f154998e25dda87c4997, type: 3}
   m_PrefabInstance: {fileID: 8196608973378310016}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &814127902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814127897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1682d648d3044546ac20fb8418c0875, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  alignToView: 1
 --- !u!1 &869988666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,15 +1394,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 953821466712004026, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.8625103
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 953821466712004026, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.8625103
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 953821466712004026, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.18625104
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 953821466712004026, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1505,6 +1444,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 973469183521538536, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: xrCamera
+      value: 
+      objectReference: {fileID: 65284394}
+    - target: {fileID: 973469183521538536, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: toggleAction.m_SingletonActionBindings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 973469183521538536, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: toggleAction.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 85e08aba-0d0f-44a1-94a0-b36a205592fd
+      objectReference: {fileID: 0}
+    - target: {fileID: 973469183521538536, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: toggleAction.m_SingletonActionBindings.Array.data[1].m_Id
+      value: 27ebf322-c09f-4c60-bf8a-4202cdd87e72
+      objectReference: {fileID: 0}
+    - target: {fileID: 973469183521538536, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: toggleAction.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/space
+      objectReference: {fileID: 0}
+    - target: {fileID: 973469183521538536, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: toggleAction.m_SingletonActionBindings.Array.data[1].m_Path
+      value: <XRController>/{PrimaryButton}
+      objectReference: {fileID: 0}
+    - target: {fileID: 973469183521538536, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: toggleAction.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Toggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 973469183521538536, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: toggleAction.m_SingletonActionBindings.Array.data[1].m_Action
+      value: Toggle
+      objectReference: {fileID: 0}
     - target: {fileID: 1742549046260485947, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
       propertyPath: m_Name
       value: Viewing Plane
@@ -1521,6 +1492,10 @@ PrefabInstance:
       propertyPath: VirtualCamera
       value: 
       objectReference: {fileID: 814127897}
+    - target: {fileID: 5453808748954139467, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: xrCameraOffset
+      value: 
+      objectReference: {fileID: 223974226}
     - target: {fileID: 5453808748954139467, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
       propertyPath: swapAction.m_Name
       value: Swap
@@ -2391,7 +2366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5232943926941573658, guid: 63fff4dda137f154998e25dda87c4997, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.36
+      value: 5.61
       objectReference: {fileID: 0}
     - target: {fileID: 5232943926941573658, guid: 63fff4dda137f154998e25dda87c4997, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2429,13 +2404,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VirtualCamera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8203058086547295988, guid: 63fff4dda137f154998e25dda87c4997, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 814127902}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63fff4dda137f154998e25dda87c4997, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
