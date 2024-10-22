@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 953821466712004026}
   - component: {fileID: 6522903650334387719}
+  - component: {fileID: 973469183521538536}
   m_Layer: 0
   m_Name: Viewing Plane
   m_TagString: Untagged
@@ -76,6 +77,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &973469183521538536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742549046260485947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f999f9e5ffc10bb4fa14919dea410383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xrCamera: {fileID: 0}
+  toggleAction:
+    m_Name: Toggle
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a65ec7cb-c8be-4869-9a55-e39f4c5ca1a3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  planeDistance: 5
 --- !u!1 &2418775082778964336
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,4 +325,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VirtualCamera: {fileID: 0}
+  xrPlayer: {fileID: 0}
+  xrCameraOffset: {fileID: 0}
   xrPlayerTag: XRPlayer
+  swapAction:
+    m_Name: Swap
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4552597a-ec1e-4306-9846-c41b1d5d2522
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0

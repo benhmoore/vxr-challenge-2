@@ -4,33 +4,31 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(CharacterController))]
 public class Movement : MonoBehaviour
 {
-    private CharacterController _characterController;
-    private  float _speed = 5.0f;
-    private Vector2 _playerMovementInput;
+    public float speed = 5.0f;               // Movement speed
+    private Vector2 playerMovementInput;     // Input values for movement
 
-    void Start()
-    {
-        //Debug.Log(" New Player created");
-        _characterController = GetComponent<CharacterController>();
-    }
-    // Update is called once per frame
     void Update()
     {
-       MovePlayer();
-       
+        // Call movement method every frame
+        MovePlayer();
     }
 
     void MovePlayer()
     {
-        Vector3 movement = new Vector3(_playerMovementInput.x, 0.0f, _playerMovementInput.y);
-        _characterController.SimpleMove(movement * _speed);
+        // Convert the 2D input into a 3D movement vector (no Y-axis movement)
+        Vector3 movement = new Vector3(playerMovementInput.x, 0.0f, playerMovementInput.y);
+
+        // Move the player using the transform (no need for a CharacterController)
+        // Multiply by speed and Time.deltaTime for consistent movement
+        transform.Translate(movement * speed * Time.deltaTime, Space.World);
     }
+
+    // This method gets called when movement input is detected (via the Input System)
     void OnMove(InputValue iv)
     {
-        //Debug.Log("Movement Pressed");
-        _playerMovementInput = iv.Get<Vector2>(); 
+        // Update player movement input vector
+        playerMovementInput = iv.Get<Vector2>();
     }
 }
