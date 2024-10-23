@@ -9,12 +9,12 @@ public class NoGravityCharacterController : MonoBehaviour
 
     // Movement speed
     public float moveSpeed = 6f;
-
+    
     // Input actions
     public InputAction movementAction;
 
     private Vector2 movementInput;
-
+    
     void Awake()
     {
         // Get the CharacterController component on this GameObject
@@ -49,6 +49,7 @@ public class NoGravityCharacterController : MonoBehaviour
         // Call the Move method to actually move the character
         Move(movement);
     }
+
 
     // Public method to move without applying gravity
     public void Move(Vector3 motion)
