@@ -5,6 +5,9 @@ public class TeleToView : MonoBehaviour
 {
     // Reference to the XR Camera (main camera or player's head in VR)
     public Transform xrCamera;
+    public AudioSource audioSource;
+    public AudioClip viewLock, viewUnlock;
+    public AlignToPlayerView alignmentScript;
 
     // Input Action for toggling (space bar and/or VR controller button)
     public InputAction toggleAction;
@@ -65,7 +68,9 @@ public class TeleToView : MonoBehaviour
         {
             // Unparent the GameObject from the XR Camera
             transform.SetParent(null);
-            Debug.Log("GameObject unparented from XR Camera.");
+            audioSource.PlayOneShot(viewLock);
+            alignmentScript.alignToView = false;
+            //Debug.Log("GameObject unparented from XR Camera.");
         }
         else
         {
@@ -74,7 +79,9 @@ public class TeleToView : MonoBehaviour
 
             // Parent the GameObject to the XR Camera
             transform.SetParent(xrCamera);
-            Debug.Log("GameObject parented to XR Camera.");
+            audioSource.PlayOneShot(viewUnlock);
+            alignmentScript.alignToView = true;
+            //Debug.Log("GameObject parented to XR Camera.");
         }
 
         // Toggle the parenting state

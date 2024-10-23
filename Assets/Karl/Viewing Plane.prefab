@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 953821466712004026}
   - component: {fileID: 6522903650334387719}
   - component: {fileID: 973469183521538536}
+  - component: {fileID: 6672906783655706226}
+  - component: {fileID: 3558625694030639433}
   m_Layer: 0
   m_Name: Viewing Plane
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3263852417564159978}
@@ -90,6 +92,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xrCamera: {fileID: 0}
+  audioSource: {fileID: 6672906783655706226}
+  viewLock: {fileID: 8300000, guid: 7ea6f7fcae8976a46a4a777d92d1e587, type: 3}
+  viewUnlock: {fileID: 8300000, guid: feaee0b81f4b40546baee873e4763eb1, type: 3}
+  alignmentScript: {fileID: 3558625694030639433}
   toggleAction:
     m_Name: Toggle
     m_Type: 0
@@ -97,9 +103,170 @@ MonoBehaviour:
     m_Id: a65ec7cb-c8be-4869-9a55-e39f4c5ca1a3
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 85e08aba-0d0f-44a1-94a0-b36a205592fd
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Toggle
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 27ebf322-c09f-4c60-bf8a-4202cdd87e72
+      m_Path: <XRController>/{PrimaryButton}
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Toggle
+      m_Flags: 0
     m_Flags: 0
   planeDistance: 5
+--- !u!82 &6672906783655706226
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742549046260485947}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e87a5e4fe48970d4a9809c786a682be8, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 25
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -25.00996
+      outSlope: -25.00996
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.04602249
+      value: 0.20715332
+      inSlope: -6.25249
+      outSlope: -6.25249
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.08475128
+      value: 0.07144165
+      inSlope: -1.5631225
+      outSlope: -1.5631225
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.20349914
+      value: 0
+      inSlope: -0.39078063
+      outSlope: -0.39078063
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3972937
+      value: 0
+      inSlope: -0.09769516
+      outSlope: -0.09769516
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.9951477
+      value: 0
+      inSlope: -0.04001595
+      outSlope: -0.04001595
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &3558625694030639433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742549046260485947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1682d648d3044546ac20fb8418c0875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alignToView: 1
 --- !u!1 &2418775082778964336
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +278,6 @@ GameObject:
   - component: {fileID: 2896485034940463193}
   - component: {fileID: 3232913910175906376}
   - component: {fileID: 3383097312380880419}
-  - component: {fileID: 713745904027656464}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -184,28 +350,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &713745904027656464
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2418775082778964336}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &9132641366627811353
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,6 +363,7 @@ GameObject:
   - component: {fileID: 8394679343920176248}
   - component: {fileID: 3364475372851692621}
   - component: {fileID: 5453808748954139467}
+  - component: {fileID: 4477930491323780736}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -301,17 +446,17 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 32
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 32
+    m_Bits: 23
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: -1}
 --- !u!114 &5453808748954139467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +472,9 @@ MonoBehaviour:
   VirtualCamera: {fileID: 0}
   xrPlayer: {fileID: 0}
   xrCameraOffset: {fileID: 0}
-  xrPlayerTag: XRPlayer
+  headsetSource: {fileID: 0}
+  teleportSound: {fileID: 8300000, guid: 29439dcb5b83d2e448efe6582fa98d3e, type: 3}
+  xrPlayerTag: MainCamera
   swapAction:
     m_Name: Swap
     m_Type: 0
@@ -335,5 +482,42 @@ MonoBehaviour:
     m_Id: 4552597a-ec1e-4306-9846-c41b1d5d2522
     m_Processors: 
     m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: a557301a-8938-4309-b253-2582e331f7c8
+      m_Path: <Keyboard>/enter
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Swap
+      m_Flags: 0
+    m_Flags: 0
+--- !u!54 &4477930491323780736
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9132641366627811353}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
     m_SingletonActionBindings: []
     m_Flags: 0
