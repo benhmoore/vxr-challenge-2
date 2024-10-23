@@ -1,0 +1,107 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void AlignToPlayerView_Start_m506E30A97440B0867DADCF256B076635B3FA359C (void);
+extern void AlignToPlayerView_Update_mAD775F37582E0CA53AD72B3C9B7450A24FFA76A4 (void);
+extern void AlignToPlayerView_AlignToCamera_mEF6932198CCE02E7CC40919ABBE81BE831968ADE (void);
+extern void AlignToPlayerView__ctor_mF6542BED2D77CDD7E90DC5ADE36BB9CC9ED3B7F2 (void);
+extern void SwapPlayerAndCamera_OnEnable_m927E2900DD9B831BF1597B29FDB3CD0D1C8A1478 (void);
+extern void SwapPlayerAndCamera_OnDisable_mF10872654F021678A2CB875553C7D7AB188395A2 (void);
+extern void SwapPlayerAndCamera_OnTriggerEnter_mB58EC5D708CBEC58F6D89A801ED041655BE14869 (void);
+extern void SwapPlayerAndCamera_OnSwapActionTriggered_m8AFA38D056897E95E0EDC81ADD31A144FEA1F62F (void);
+extern void SwapPlayerAndCamera_SwapPositions_m32434EE9815DD83A86196A5C3A7D601E4AB3DFC5 (void);
+extern void SwapPlayerAndCamera__ctor_m180C126BAE9D2B70D0AC3D0273E0BB2A54B5B524 (void);
+extern void Movement_Start_m3D09153FD03F06C31BBD151C21BA361EA49FA72B (void);
+extern void Movement_Update_m4B99F519DF0A29B476F90FE4314A770CD53EC418 (void);
+extern void Movement_MovePlayer_m8D58E6C3B1993EBB98F21A492B508F3C0CA3C216 (void);
+extern void Movement_OnMove_mAB57C7D80E3746D290AF5FDE086C3384D6D94639 (void);
+extern void Movement__ctor_mCB72C1AD57256D73959D74FB86C5D0AA69EAE7ED (void);
+extern void PlayerMovement_Start_m83FD44DCA324CE3D05A71FD2E2991FCD743F003A (void);
+extern void PlayerMovement_Update_m5BB6CE35AF68EE00CFEB4BA5EBA17E10667551D3 (void);
+extern void PlayerMovement_MovePlayer_mD56624BEDCEDD1C1532CAD92DF819BA568E5F060 (void);
+extern void PlayerMovement_OnMove_mF6863ADE778EEEB1F969D17F886684854EC7E511 (void);
+extern void PlayerMovement__ctor_mB37559C5B0638161878D20E00B7C672FC38BBBAA (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
+static Il2CppMethodPointer s_methodPointers[22] = 
+{
+	AlignToPlayerView_Start_m506E30A97440B0867DADCF256B076635B3FA359C,
+	AlignToPlayerView_Update_mAD775F37582E0CA53AD72B3C9B7450A24FFA76A4,
+	AlignToPlayerView_AlignToCamera_mEF6932198CCE02E7CC40919ABBE81BE831968ADE,
+	AlignToPlayerView__ctor_mF6542BED2D77CDD7E90DC5ADE36BB9CC9ED3B7F2,
+	SwapPlayerAndCamera_OnEnable_m927E2900DD9B831BF1597B29FDB3CD0D1C8A1478,
+	SwapPlayerAndCamera_OnDisable_mF10872654F021678A2CB875553C7D7AB188395A2,
+	SwapPlayerAndCamera_OnTriggerEnter_mB58EC5D708CBEC58F6D89A801ED041655BE14869,
+	SwapPlayerAndCamera_OnSwapActionTriggered_m8AFA38D056897E95E0EDC81ADD31A144FEA1F62F,
+	SwapPlayerAndCamera_SwapPositions_m32434EE9815DD83A86196A5C3A7D601E4AB3DFC5,
+	SwapPlayerAndCamera__ctor_m180C126BAE9D2B70D0AC3D0273E0BB2A54B5B524,
+	Movement_Start_m3D09153FD03F06C31BBD151C21BA361EA49FA72B,
+	Movement_Update_m4B99F519DF0A29B476F90FE4314A770CD53EC418,
+	Movement_MovePlayer_m8D58E6C3B1993EBB98F21A492B508F3C0CA3C216,
+	Movement_OnMove_mAB57C7D80E3746D290AF5FDE086C3384D6D94639,
+	Movement__ctor_mCB72C1AD57256D73959D74FB86C5D0AA69EAE7ED,
+	PlayerMovement_Start_m83FD44DCA324CE3D05A71FD2E2991FCD743F003A,
+	PlayerMovement_Update_m5BB6CE35AF68EE00CFEB4BA5EBA17E10667551D3,
+	PlayerMovement_MovePlayer_mD56624BEDCEDD1C1532CAD92DF819BA568E5F060,
+	PlayerMovement_OnMove_mF6863ADE778EEEB1F969D17F886684854EC7E511,
+	PlayerMovement__ctor_mB37559C5B0638161878D20E00B7C672FC38BBBAA,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+};
+static const int32_t s_InvokerIndices[22] = 
+{
+	9587,
+	9587,
+	9587,
+	9587,
+	9587,
+	9587,
+	7553,
+	7820,
+	4196,
+	9587,
+	9587,
+	9587,
+	9587,
+	7553,
+	9587,
+	9587,
+	9587,
+	9587,
+	7553,
+	9587,
+	16517,
+	9587,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	22,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
