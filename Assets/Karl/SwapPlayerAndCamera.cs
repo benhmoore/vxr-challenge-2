@@ -5,13 +5,9 @@ using UnityEngine.InputSystem; // New Input System namespace
 public class SwapPlayerAndCamera : MonoBehaviour
 {
     // Public reference to the VirtualCamera
-    public GameObject VirtualCamera, xrPlayer, xrCameraOffset;
+    public GameObject VirtualCamera, xrPlayer, xrCameraOffset, xrCamera;
     public AudioSource headsetSource;
     public AudioClip teleportSound;
-    
-
-    // Tag for the XR Player. You can customize this or set it in the Unity Editor.
-    public string xrPlayerTag = "XRPlayer";
 
     // Input Action for swapping via key press
     public InputAction swapAction;
@@ -35,10 +31,11 @@ public class SwapPlayerAndCamera : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Check if the object entering the trigger has a specific component (class)
-        if (xrPlayer != null)
+        if (other.gameObject.tag == "XRPlayer" || other.gameObject.tag == "MainCamera" || other.gameObject == xrCamera)
         {
             // Swap positions between the XR Player and the VirtualCamera
             Debug.Log($"Collision detected: " + other.gameObject.name);
+            Debug.Log($"Collision detected: " + other.gameObject.GetType());
             SwapPositions(xrPlayer, VirtualCamera);
         }
     }
@@ -61,6 +58,13 @@ public class SwapPlayerAndCamera : MonoBehaviour
 
     private void SwapPositions(GameObject xrPlayer, GameObject virtualCamera)
     {
+        // Disable the CharacterController if it exists on the camera
+        CharacterController cameraController = virtualCamera.GetComponent<CharacterController>();
+        if (cameraController != null)
+        {
+            cameraController.enabled = false;
+        }
+
         // Store the positions of both the XR Player and VirtualCamera
         Vector3 xrPlayerPosition = xrPlayer.transform.position;
         Vector3 virtualCameraPosition = virtualCamera.transform.position;
@@ -69,12 +73,18 @@ public class SwapPlayerAndCamera : MonoBehaviour
         xrPlayer.transform.position = virtualCameraPosition;
         virtualCamera.transform.position = xrPlayerPosition;
 
-        //push the xrOrigin down to account for the offset
-        xrPlayer.transform.position = new Vector3(xrPlayer.transform.position.x, xrPlayer.transform.position.y + (xrPlayer.transform.position.y - xrCameraOffset.transform.position.y), xrPlayer.transform.position.z); ;
+        // Adjust for the camera offset
+        xrPlayer.transform.position = new Vector3(xrPlayer.transform.position.x, xrPlayer.transform.position.y + (xrPlayer.transform.position.y - xrCameraOffset.transform.position.y), xrPlayer.transform.position.z);
 
-        //push the virtualCamera up to account for the offset
         VirtualCamera.transform.position = new Vector3(VirtualCamera.transform.position.x, VirtualCamera.transform.position.y - (xrPlayer.transform.position.y - xrCameraOffset.transform.position.y), VirtualCamera.transform.position.z);
+
+        // Re-enable the CharacterController after moving
+        if (cameraController != null)
+        {
+            cameraController.enabled = true;
+        }
+
         headsetSource.PlayOneShot(teleportSound);
-        //Debug.Log("Swapped positions of XR Player and Virtual Camera.");
     }
+
 }
