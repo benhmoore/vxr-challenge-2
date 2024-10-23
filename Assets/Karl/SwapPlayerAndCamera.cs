@@ -1,3 +1,4 @@
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem; // New Input System namespace
 
@@ -7,6 +8,7 @@ public class SwapPlayerAndCamera : MonoBehaviour
     public GameObject VirtualCamera, xrPlayer, xrCameraOffset;
     public AudioSource headsetSource;
     public AudioClip teleportSound;
+    
 
     // Tag for the XR Player. You can customize this or set it in the Unity Editor.
     public string xrPlayerTag = "XRPlayer";
@@ -32,30 +34,23 @@ public class SwapPlayerAndCamera : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the object entering the trigger has the XR Player tag
-        if (other.CompareTag(xrPlayerTag))
+        // Check if the object entering the trigger has a specific component (class)
+        if (xrPlayer != null)
         {
-            // Get the XR Player GameObject
-            xrPlayer = other.gameObject;
-
             // Swap positions between the XR Player and the VirtualCamera
+            Debug.Log($"Collision detected: " + other.gameObject.name);
             SwapPositions(xrPlayer, VirtualCamera);
         }
     }
 
+
     // This method will be called when the key press (swapAction) is triggered
     private void OnSwapActionTriggered(InputAction.CallbackContext context)
     {
-        // Try to find the XR player using its tag if it's not already set
-        if (xrPlayer == null)
-        {
-            xrPlayer = GameObject.FindGameObjectWithTag(xrPlayerTag);
-        }
-
         if (xrPlayer != null && VirtualCamera != null)
         {
             // Fire the swap and print to console
-            Debug.Log($"Swap action triggered. Swapping positions of XR Player and Virtual Camera.");
+            //Debug.Log($"Swap action triggered. Swapping positions of XR Player and Virtual Camera.");
             SwapPositions(xrPlayer, VirtualCamera);
         }
         else
@@ -66,12 +61,6 @@ public class SwapPlayerAndCamera : MonoBehaviour
 
     private void SwapPositions(GameObject xrPlayer, GameObject virtualCamera)
     {
-        if (xrPlayer == null || virtualCamera == null)
-        {
-            Debug.LogError("XR Player or Virtual Camera is not assigned!");
-            return;
-        }
-
         // Store the positions of both the XR Player and VirtualCamera
         Vector3 xrPlayerPosition = xrPlayer.transform.position;
         Vector3 virtualCameraPosition = virtualCamera.transform.position;
