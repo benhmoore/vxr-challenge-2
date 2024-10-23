@@ -5,6 +5,8 @@ public class SwapPlayerAndCamera : MonoBehaviour
 {
     // Public reference to the VirtualCamera
     public GameObject VirtualCamera, xrPlayer, xrCameraOffset;
+    public AudioSource headsetSource;
+    public AudioClip teleportSound;
 
     // Tag for the XR Player. You can customize this or set it in the Unity Editor.
     public string xrPlayerTag = "XRPlayer";
@@ -83,7 +85,7 @@ public class SwapPlayerAndCamera : MonoBehaviour
 
         //push the virtualCamera up to account for the offset
         VirtualCamera.transform.position = new Vector3(VirtualCamera.transform.position.x, VirtualCamera.transform.position.y - (xrPlayer.transform.position.y - xrCameraOffset.transform.position.y), VirtualCamera.transform.position.z);
-
+        headsetSource.PlayOneShot(teleportSound);
         //Debug.Log("Swapped positions of XR Player and Virtual Camera.");
     }
 }
