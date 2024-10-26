@@ -793,6 +793,8 @@ GameObject:
   - component: {fileID: 65284397}
   - component: {fileID: 65284396}
   - component: {fileID: 65284395}
+  - component: {fileID: 65284399}
+  - component: {fileID: 65284400}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1027,6 +1029,123 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!82 &65284399
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65284393}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!135 &65284400
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65284393}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &223974226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,6 +1414,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6413276594773090922, guid: 63fff4dda137f154998e25dda87c4997, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8203058086547295988, guid: 63fff4dda137f154998e25dda87c4997, type: 3}
       propertyPath: m_Name
       value: VirtualCamera
@@ -1304,6 +1427,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63fff4dda137f154998e25dda87c4997, type: 3}
+--- !u!1 &875969762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8203058086547295988, guid: 63fff4dda137f154998e25dda87c4997, type: 3}
+  m_PrefabInstance: {fileID: 875969761}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1114040580
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,10 +2290,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 973469183521538536, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: xrCamera
+      value: 
+      objectReference: {fileID: 65284394}
     - target: {fileID: 1742549046260485947, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
       propertyPath: m_Name
       value: Viewing Plane
       objectReference: {fileID: 0}
+    - target: {fileID: 5453808748954139467, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: xrCamera
+      value: 
+      objectReference: {fileID: 65284393}
+    - target: {fileID: 5453808748954139467, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: xrPlayer
+      value: 
+      objectReference: {fileID: 782628375}
+    - target: {fileID: 5453808748954139467, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: VirtualCamera
+      value: 
+      objectReference: {fileID: 875969762}
+    - target: {fileID: 5453808748954139467, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: headsetSource
+      value: 
+      objectReference: {fileID: 65284399}
+    - target: {fileID: 5453808748954139467, guid: 207bca643d8eef245a85d0dbc3a071b3, type: 3}
+      propertyPath: xrCameraOffset
+      value: 
+      objectReference: {fileID: 223974226}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
