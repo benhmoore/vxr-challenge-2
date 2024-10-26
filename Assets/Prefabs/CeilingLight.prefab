@@ -530,6 +530,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5a80eef666e31472f8fd0ddc7c443bff, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44e42c13293114ee6ad6123f1795ddf7, type: 2}
     - target: {fileID: 919132149155446097, guid: 5a80eef666e31472f8fd0ddc7c443bff, type: 3}
       propertyPath: m_Name
       value: CeilingLight
