@@ -78,7 +78,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: glass.placeholder
-    second: {fileID: 2100000, guid: afd4646d448ec4909b6c4447efce7265, type: 2}
+    second: {fileID: 2100000, guid: ff74d954e792a4bcb95744077d467363, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
