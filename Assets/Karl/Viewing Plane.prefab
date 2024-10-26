@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3263852417564159978}
@@ -121,7 +121,7 @@ MonoBehaviour:
       m_Action: Toggle
       m_Flags: 0
     m_Flags: 0
-  planeDistance: 5
+  planeDistance: 0.75
 --- !u!82 &6672906783655706226
 AudioSource:
   m_ObjectHideFlags: 0
@@ -446,10 +446,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 32
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 23
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -472,9 +472,9 @@ MonoBehaviour:
   VirtualCamera: {fileID: 0}
   xrPlayer: {fileID: 0}
   xrCameraOffset: {fileID: 0}
+  xrCamera: {fileID: 0}
   headsetSource: {fileID: 0}
   teleportSound: {fileID: 8300000, guid: 29439dcb5b83d2e448efe6582fa98d3e, type: 3}
-  xrPlayerTag: MainCamera
   swapAction:
     m_Name: Swap
     m_Type: 0
@@ -519,5 +519,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
-    m_SingletonActionBindings: []
-    m_Flags: 0

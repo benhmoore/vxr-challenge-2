@@ -162,7 +162,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: cf27531d67f864107968c247c8041565, type: 2}
   m_audioClip: {fileID: 8300000, guid: 2ab9eeeb0e1f0764ba86423282a7b9e1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.277
+  m_Volume: 0.189
   m_Pitch: 0.6
   Loop: 1
   Mute: 0
@@ -290,7 +290,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: cf27531d67f864107968c247c8041565, type: 2}
   m_audioClip: {fileID: 8300000, guid: 2ab9eeeb0e1f0764ba86423282a7b9e1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.277
+  m_Volume: 0.146
   m_Pitch: 0.6
   Loop: 1
   Mute: 0
@@ -5732,7 +5732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4767400413853537203, guid: 279c493f87e7c4f63b523453f42e2d28, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5148817236446094103, guid: 279c493f87e7c4f63b523453f42e2d28, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5889,6 +5889,38 @@ PrefabInstance:
     - target: {fileID: 1902917052742924750, guid: 89c11222dc1fa4e5da66f3160ee41802, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245821955612868359, guid: 89c11222dc1fa4e5da66f3160ee41802, type: 3}
+      propertyPath: enableFlicker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245821955612868359, guid: 89c11222dc1fa4e5da66f3160ee41802, type: 3}
+      propertyPath: flickerInterval
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245821955612868359, guid: 89c11222dc1fa4e5da66f3160ee41802, type: 3}
+      propertyPath: flickerSpeedMax
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245821955612868359, guid: 89c11222dc1fa4e5da66f3160ee41802, type: 3}
+      propertyPath: flickerSpeedMin
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245821955612868359, guid: 89c11222dc1fa4e5da66f3160ee41802, type: 3}
+      propertyPath: flickerDurationMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245821955612868359, guid: 89c11222dc1fa4e5da66f3160ee41802, type: 3}
+      propertyPath: flickerDurationMin
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245821955612868359, guid: 89c11222dc1fa4e5da66f3160ee41802, type: 3}
+      propertyPath: flickerProbability
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245821955612868359, guid: 89c11222dc1fa4e5da66f3160ee41802, type: 3}
+      propertyPath: flickerIntensityMax
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6911,6 +6943,14 @@ PrefabInstance:
       value: Buzz
       objectReference: {fileID: 0}
     - target: {fileID: 8392122648578520618, guid: 631a40f443bd348fabcf9cd121d5cf74, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392122648578520618, guid: 631a40f443bd348fabcf9cd121d5cf74, type: 3}
+      propertyPath: m_Volume
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392122648578520618, guid: 631a40f443bd348fabcf9cd121d5cf74, type: 3}
       propertyPath: MinDistance
       value: 6.115178
       objectReference: {fileID: 0}
@@ -7041,6 +7081,14 @@ PrefabInstance:
     - target: {fileID: 8260753457717835263, guid: 631a40f443bd348fabcf9cd121d5cf74, type: 3}
       propertyPath: m_Name
       value: Buzz (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392122648578520618, guid: 631a40f443bd348fabcf9cd121d5cf74, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392122648578520618, guid: 631a40f443bd348fabcf9cd121d5cf74, type: 3}
+      propertyPath: m_Volume
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 8392122648578520618, guid: 631a40f443bd348fabcf9cd121d5cf74, type: 3}
       propertyPath: MinDistance
