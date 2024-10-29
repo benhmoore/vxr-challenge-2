@@ -1,9 +1,129 @@
 fileFormatVersion: 2
-guid: 64b66b949aa94453d8fcfe808c4084f1
+guid: 279c493f87e7c4f63b523453f42e2d28
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Accents.Black
+    second: {fileID: 2100000, guid: 560289b7ab05b4204815da8da4b692d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Accents.Gray
+    second: {fileID: 2100000, guid: 5cf6026db62e9424cb57471560c18815, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Accents.Gray.001
+    second: {fileID: 2100000, guid: 829a660d05dd0432abd86834d1235097, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Accents.Orange
+    second: {fileID: 2100000, guid: fc4a1c56cb0a14d6eab0e7785f641810, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Accents.Red
+    second: {fileID: 2100000, guid: a31f0a8f37c764489a2e59b3c922361f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boring.Paint
+    second: {fileID: 2100000, guid: d3ecec7309d7d4169ad310231a40ca6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete.2
+    second: {fileID: 2100000, guid: b8db0eab439014a59b3dd57199aa07ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Darker.Paint
+    second: {fileID: 2100000, guid: 8c896d023151149a5959319acbf9d01e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frame
+    second: {fileID: 2100000, guid: b742ec10e8a6448eb817a6179c78c6a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green.Metal
+    second: {fileID: 2100000, guid: 47479661342584ce6bfdae7f5a7db1cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gun.Metal
+    second: {fileID: 2100000, guid: ab2c3237120f24e789bac309ddebd8a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rubber.1
+    second: {fileID: 2100000, guid: d16dee7b3fb1149ea8e626a974a97ec5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Smothered.Bricks
+    second: {fileID: 2100000, guid: 5240ee9bcd8434d0886686ce9a5b6ce4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tape.Caution
+    second: {fileID: 2100000, guid: b77e48eb3ce904d4897d8f562dc2dec4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood.1
+    second: {fileID: 2100000, guid: 8bb0d31ed614b442888da6cd3cfcd723, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass.placeholder
+    second: {fileID: 2100000, guid: ff74d954e792a4bcb95744077d467363, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: measure
+    second: {fileID: 2100000, guid: 3365bac0cf4724f1f9a1cce2c8d1c2ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal.shutter
+    second: {fileID: 2100000, guid: bd6b33437702947cda1c5467aae2f9b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: poster.unusual.001
+    second: {fileID: 2100000, guid: 50efc1748d30848a5a4353c574a2e6bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: poster.watch.your.step
+    second: {fileID: 2100000, guid: 271718fcb79814cf089d9c40e6f0c53b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: scuffs.001
+    second: {fileID: 2100000, guid: 39055bbe61062459f94267924f8934d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sticker.eyes
+    second: {fileID: 2100000, guid: b9e6c171e031f4714b5ce918775a83ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sticker.logo
+    second: {fileID: 2100000, guid: 62b77d899cdd44a20b0b08a16c72c5aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sticker.you.got.this
+    second: {fileID: 2100000, guid: dc87c5e584b714b11beb005ee2e67c04, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -48,7 +168,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
